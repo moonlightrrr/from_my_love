@@ -1,0 +1,103 @@
+/* ===== ОСНОВА ===== */
+body 
+{
+  margin: 0;
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+
+  background-image: url(2d-stardew-valley-mountains-and-sky-bxdaa0lic9b5coki.jpg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     background-attachment: fixed;
+     display: flex;
+     justify-content: baseline;
+     cursor: url(https://www.rw-designer.com/cursor-view/152389.png), auto;
+}
+
+* 
+{
+  box-sizing: border-box;
+  image-rendering: pixelated;
+  cursor: url(https://www.rw-designer.com/cursor-view/152330.png), auto;
+}
+
+/* ===== КОНТЕЙНЕР ===== */
+.site 
+{
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+/* ===== ОБЩИЙ СТИЛЬ ПАНЕЛЕЙ ===== */
+.panel 
+{
+  background-color: #f3e3c8;
+  border: 2px solid #8a6a4a;
+  padding: 12px;
+  margin-bottom: 12px;
+
+  box-shadow: 4px 4px 0 #5a4633;
+}
+
+/* ===== ШАПКА ===== */
+.header 
+{
+  text-align: center;
+}
+
+/* ===== СЕТКА КАК НА ПЕРВОМ САЙТЕ ===== */
+.layout 
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* ===== НАВИГАЦИЯ ===== */
+.nav-grid 
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+a
+{
+  background-color: #e2c89c;
+  border: 2px solid #8a6a4a;
+  padding: 6px;
+  text-align: center;
+  cursor: pointer;
+}
+
+a:visited
+{
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-item:hover 
+{
+  background-color: #d9b97d;
+}
+
+/* ===== ТЕКСТ ===== */
+h1, h2 
+{
+  margin-top: 0;
+  text-align: center;
+  background-color: #d9b97d;
+  color: #5a4633;
+}
+
+ul 
+{
+  padding-left: 20px;
+}
+
+img
+{
+    max-width: 100%;
+    height: auto;
+}
