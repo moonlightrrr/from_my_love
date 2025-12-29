@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Kliker</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="ikon.png.jpg">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+  }
+
+  body {
+    height: 100vh;
+    background-image: url("2d-stardew-valley-mountains-and-sky-bxdaa0lic9b5coki.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  /* Счётчик */
+  .counter {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    padding: 12px 28px;
+    border-radius: 14px;
+    font-size: 24px;
+    box-shadow: 0 4px 0 #9b9b9b;
+  }
+
+  /* Центр */
+  .game {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Курица */
+  #chicken {
+    width: 220px;
+    cursor: pointer;
+    image-rendering: pixelated;
+    transition: transform 0.1s;
+  }
+
+  #chicken:active {
+    transform: scale(0.92);
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="counter">
+    Клики: <span id="count">0</span>
+  </div>
+
+  <div class="game">
+    <img id="chicken" src="White_Chicken.png" alt="курица">
+  </div>
+
+<script>
+  let count = 0;
+
+  const countEl = document.getElementById("count");
+  const chicken = document.getElementById("chicken");
+
+  chicken.addEventListener("click", () => {
+    count++;
+    countEl.textContent = count;
+
+    if (count >= 60) {
+      chicken.src = "grill.png";      // курица-гриль 🍗
+    } else if (count >= 40) {
+      chicken.src = "Blue_Chicken.png";       // синяя
+    } else if (count >= 20) {
+      chicken.src = "Brown_Chicken.png";      // коричневая
+    } else {
+      chicken.src = "White_Chicken.png";      // белая
+    }
+  });
+</script>
+
+</body>
+</html>
