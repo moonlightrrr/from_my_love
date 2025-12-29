@@ -101,3 +101,52 @@ img
     max-width: 100%;
     height: auto;
 }
+ 
+
+
+/* ===== СЛОЙ С ПТИЦАМИ ===== */
+#background-birds {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== ПТИЦА ===== */
+.bird {
+  position: absolute;
+
+  width: 48px;
+  height: 32px;
+
+  background-image: url("PC\ _\ Computer\ -\ Stardew\ Valley\ -\ Animals\ -\ Gem\ Birds.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  image-rendering: pixelated;
+
+  animation-name: fly;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fly {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-130vw);
+  }
+}
+
+/* ===== ПАНЕЛИ ПОВЕРХ ПТИЦ ===== */
+.site {
+  position: relative;
+  z-index: 5;
+}
+
